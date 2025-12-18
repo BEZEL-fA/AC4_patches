@@ -1,0 +1,26 @@
+Version: 1.2
+
+PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
+  "Fix PvP volume loading":
+    Games:
+      "Armored Core 4":
+        BLUS30027: [ 01.01 ]
+    Author: "BEZEL"
+    Notes:
+    Patch Version: 1.0
+    Patch:
+      - [ be64, 0x0073EA54, 0x2F800000409E0018 ] #cmpwi cr7, r0, 0x0 / bne cr7, 0x73ea70
+
+PPU-cd96ecb17388ccb07124fec4c64ea9f30e1eb2dc:
+  "Fix PvP volume loading":
+    Games:
+      "Armored Core 4":
+        BLJM60012: [ 01.05 ]
+        BLJM60062: [ 01.00 ]
+    Author: "BEZEL"
+    Patch Version: 1.0
+    Group:
+    Notes: "This patch fixes an issue where volume settings were not correctly applied when loading save data before a PvP match."
+    Patch:
+      - [ be64, 0x0039EE80, 0x2F800000409E001C ] #cmpwi cr7, r0, 0x0 / bne cr7, 0x39eea0
+
