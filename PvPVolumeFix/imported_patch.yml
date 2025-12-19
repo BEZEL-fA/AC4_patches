@@ -6,7 +6,7 @@ PPU-9f68cdccee3b1bdd1849b346a472775fab33c2db:
       "Armored Core 4":
         BLUS30027: [ 01.01 ]
     Author: "BEZEL"
-    Notes:
+    Notes: "This patch fixes an issue where volume settings were not correctly applied when loading save data before a PvP match."
     Patch Version: 1.0
     Patch:
       - [ be64, 0x0073EA54, 0x2F800000409E0018 ] #cmpwi cr7, r0, 0x0 / bne cr7, 0x73ea70
